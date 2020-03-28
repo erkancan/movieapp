@@ -15,6 +15,18 @@
 		B252CAFF242E83B200D918C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B252CAFD242E83B200D918C7 /* LaunchScreen.storyboard */; };
 		B252CB0A242E83B200D918C7 /* MovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB09242E83B200D918C7 /* MovieAppTests.swift */; };
 		B252CB15242E83B200D918C7 /* MovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB14242E83B200D918C7 /* MovieAppUITests.swift */; };
+		B252CB31242FA20B00D918C7 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB2E242FA20B00D918C7 /* RxSwift.framework */; };
+		B252CB32242FA20C00D918C7 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB2E242FA20B00D918C7 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B252CB33242FA20C00D918C7 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB2F242FA20B00D918C7 /* RxMoya.framework */; };
+		B252CB34242FA20C00D918C7 /* RxMoya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB2F242FA20B00D918C7 /* RxMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B252CB35242FA20C00D918C7 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB30242FA20B00D918C7 /* RxCocoa.framework */; };
+		B252CB36242FA20C00D918C7 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB30242FA20B00D918C7 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B252CB3B242FA44800D918C7 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB39242FA43300D918C7 /* RxRelay.framework */; };
+		B252CB3C242FA44800D918C7 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB39242FA43300D918C7 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B252CB3E242FA47300D918C7 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB3D242FA47300D918C7 /* Moya.framework */; };
+		B252CB3F242FA47300D918C7 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB3D242FA47300D918C7 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B252CB41242FA48F00D918C7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB40242FA48F00D918C7 /* Alamofire.framework */; };
+		B252CB42242FA48F00D918C7 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB40242FA48F00D918C7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B252CB37242FA20C00D918C7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B252CB3C242FA44800D918C7 /* RxRelay.framework in Embed Frameworks */,
+				B252CB42242FA48F00D918C7 /* Alamofire.framework in Embed Frameworks */,
+				B252CB3F242FA47300D918C7 /* Moya.framework in Embed Frameworks */,
+				B252CB36242FA20C00D918C7 /* RxCocoa.framework in Embed Frameworks */,
+				B252CB34242FA20C00D918C7 /* RxMoya.framework in Embed Frameworks */,
+				B252CB32242FA20C00D918C7 /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B252CAEF242E83AF00D918C7 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B252CAF2242E83AF00D918C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +80,12 @@
 		B252CB10242E83B200D918C7 /* MovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B252CB14242E83B200D918C7 /* MovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppUITests.swift; sourceTree = "<group>"; };
 		B252CB16242E83B200D918C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B252CB2E242FA20B00D918C7 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		B252CB2F242FA20B00D918C7 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		B252CB30242FA20B00D918C7 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		B252CB39242FA43300D918C7 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		B252CB3D242FA47300D918C7 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		B252CB40242FA48F00D918C7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +93,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B252CB3B242FA44800D918C7 /* RxRelay.framework in Frameworks */,
+				B252CB41242FA48F00D918C7 /* Alamofire.framework in Frameworks */,
+				B252CB3E242FA47300D918C7 /* Moya.framework in Frameworks */,
+				B252CB35242FA20C00D918C7 /* RxCocoa.framework in Frameworks */,
+				B252CB33242FA20C00D918C7 /* RxMoya.framework in Frameworks */,
+				B252CB31242FA20B00D918C7 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +126,7 @@
 				B252CB08242E83B200D918C7 /* MovieAppTests */,
 				B252CB13242E83B200D918C7 /* MovieAppUITests */,
 				B252CAF0242E83AF00D918C7 /* Products */,
+				B252CB2D242FA20B00D918C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +143,14 @@
 		B252CAF1242E83AF00D918C7 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				B252CAF2242E83AF00D918C7 /* AppDelegate.swift */,
-				B252CAF4242E83AF00D918C7 /* SceneDelegate.swift */,
+				B252CB22242F683E00D918C7 /* App */,
+				B252CB29242F6A3F00D918C7 /* Common */,
+				B252CB28242F6A2200D918C7 /* Coordinator */,
+				B252CB26242F6A1200D918C7 /* Models */,
+				B252CB25242F6A0200D918C7 /* Networking */,
+				B252CB23242F685400D918C7 /* Scenes */,
 				B252CAF6242E83AF00D918C7 /* ViewController.swift */,
 				B252CAF8242E83AF00D918C7 /* Main.storyboard */,
-				B252CAFB242E83B200D918C7 /* Assets.xcassets */,
-				B252CAFD242E83B200D918C7 /* LaunchScreen.storyboard */,
-				B252CB00242E83B200D918C7 /* Info.plist */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -128,6 +173,98 @@
 			path = MovieAppUITests;
 			sourceTree = "<group>";
 		};
+		B252CB22242F683E00D918C7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B252CAF2242E83AF00D918C7 /* AppDelegate.swift */,
+				B252CAF4242E83AF00D918C7 /* SceneDelegate.swift */,
+				B252CAFB242E83B200D918C7 /* Assets.xcassets */,
+				B252CAFD242E83B200D918C7 /* LaunchScreen.storyboard */,
+				B252CB00242E83B200D918C7 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B252CB23242F685400D918C7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B252CB24242F687900D918C7 /* PopulerMovieListScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B252CB24242F687900D918C7 /* PopulerMovieListScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PopulerMovieListScene;
+			sourceTree = "<group>";
+		};
+		B252CB25242F6A0200D918C7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B252CB26242F6A1200D918C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B252CB28242F6A2200D918C7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B252CB29242F6A3F00D918C7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B252CB2C242F6AE200D918C7 /* Managers */,
+				B252CB2B242F6ADA00D918C7 /* Helpers */,
+				B252CB2A242F6AC900D918C7 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B252CB2A242F6AC900D918C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B252CB2B242F6ADA00D918C7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B252CB2C242F6AE200D918C7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B252CB2D242FA20B00D918C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B252CB40242FA48F00D918C7 /* Alamofire.framework */,
+				B252CB3D242FA47300D918C7 /* Moya.framework */,
+				B252CB39242FA43300D918C7 /* RxRelay.framework */,
+				B252CB30242FA20B00D918C7 /* RxCocoa.framework */,
+				B252CB2F242FA20B00D918C7 /* RxMoya.framework */,
+				B252CB2E242FA20B00D918C7 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +275,7 @@
 				B252CAEB242E83AF00D918C7 /* Sources */,
 				B252CAEC242E83AF00D918C7 /* Frameworks */,
 				B252CAED242E83AF00D918C7 /* Resources */,
+				B252CB37242FA20C00D918C7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -435,7 +573,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieApp/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MovieApp/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +595,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieApp/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MovieApp/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
