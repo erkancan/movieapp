@@ -27,6 +27,14 @@
 		B252CB3F242FA47300D918C7 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB3D242FA47300D918C7 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B252CB41242FA48F00D918C7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB40242FA48F00D918C7 /* Alamofire.framework */; };
 		B252CB42242FA48F00D918C7 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B252CB40242FA48F00D918C7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B252CB48242FD1CA00D918C7 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB44242FD1CA00D918C7 /* ApiRequest.swift */; };
+		B252CB49242FD1CA00D918C7 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB45242FD1CA00D918C7 /* ApiConstant.swift */; };
+		B252CB4A242FD1CA00D918C7 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB46242FD1CA00D918C7 /* ApiServices.swift */; };
+		B252CB4C242FE03900D918C7 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB4B242FE03900D918C7 /* ApiResponse.swift */; };
+		B252CB4E242FE04E00D918C7 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB4D242FE04E00D918C7 /* ApiError.swift */; };
+		B28CC46724315B9F00E3A5AC /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252CB43242FD1C900D918C7 /* ApiRouter.swift */; };
+		B2E0C7602430DBCF0037EDA0 /* PopulerMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0C75F2430DBCF0037EDA0 /* PopulerMovieResponse.swift */; };
+		B2E0C7632430DC210037EDA0 /* PopulerMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0C7622430DC210037EDA0 /* PopulerMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +94,14 @@
 		B252CB39242FA43300D918C7 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		B252CB3D242FA47300D918C7 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		B252CB40242FA48F00D918C7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B252CB43242FD1C900D918C7 /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		B252CB44242FD1CA00D918C7 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		B252CB45242FD1CA00D918C7 /* ApiConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
+		B252CB46242FD1CA00D918C7 /* ApiServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		B252CB4B242FE03900D918C7 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		B252CB4D242FE04E00D918C7 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		B2E0C75F2430DBCF0037EDA0 /* PopulerMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulerMovieResponse.swift; sourceTree = "<group>"; };
+		B2E0C7622430DC210037EDA0 /* PopulerMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulerMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +219,12 @@
 		B252CB25242F6A0200D918C7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B252CB45242FD1CA00D918C7 /* ApiConstant.swift */,
+				B252CB43242FD1C900D918C7 /* ApiRouter.swift */,
+				B252CB46242FD1CA00D918C7 /* ApiServices.swift */,
+				B252CB44242FD1CA00D918C7 /* ApiRequest.swift */,
+				B252CB4B242FE03900D918C7 /* ApiResponse.swift */,
+				B252CB4D242FE04E00D918C7 /* ApiError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -210,6 +232,8 @@
 		B252CB26242F6A1200D918C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2E0C7612430DC0A0037EDA0 /* Entitys */,
+				B2E0C75E2430DBB30037EDA0 /* Responses */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +287,22 @@
 				B252CB2E242FA20B00D918C7 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2E0C75E2430DBB30037EDA0 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0C75F2430DBCF0037EDA0 /* PopulerMovieResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		B2E0C7612430DC0A0037EDA0 /* Entitys */ = {
+			isa = PBXGroup;
+			children = (
+				B2E0C7622430DC210037EDA0 /* PopulerMovie.swift */,
+			);
+			path = Entitys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,7 +437,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B252CB49242FD1CA00D918C7 /* ApiConstant.swift in Sources */,
+				B2E0C7632430DC210037EDA0 /* PopulerMovie.swift in Sources */,
+				B28CC46724315B9F00E3A5AC /* ApiRouter.swift in Sources */,
+				B252CB4A242FD1CA00D918C7 /* ApiServices.swift in Sources */,
 				B252CAF7242E83AF00D918C7 /* ViewController.swift in Sources */,
+				B252CB48242FD1CA00D918C7 /* ApiRequest.swift in Sources */,
+				B252CB4E242FE04E00D918C7 /* ApiError.swift in Sources */,
+				B252CB4C242FE03900D918C7 /* ApiResponse.swift in Sources */,
+				B2E0C7602430DBCF0037EDA0 /* PopulerMovieResponse.swift in Sources */,
 				B252CAF3242E83AF00D918C7 /* AppDelegate.swift in Sources */,
 				B252CAF5242E83AF00D918C7 /* SceneDelegate.swift in Sources */,
 			);
