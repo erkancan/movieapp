@@ -37,12 +37,28 @@ class PopularMovieListViewController: UIViewController, BindableType {
     func bindViewModel() {
         
         let output = viewModel.outputs
-      
+        
         output.tableviewCellsModelType
             .asObservable()
             .map {[TablesSectionModel(model: "", items: $0)]}
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected.bind { [weak self] (indexPath) in
+            
+            guard let self = self else {return}
+            
+            self.tableView.deselectRow(at: indexPath, animated: true)
+            
+            guard let cell = self.tableView.cellForRow(at: indexPath) as? PopulerMoviewListTableViewCell else { return}
+            cell.viewModel.output.populerMovie.bind { [weak self] (movie) in
+                
+                guard let self = self else { return }
+                self.openDetail(withPopulerMovie: movie)
+                
+            }.disposed(by: self.disposeBag)
+            
+        }.disposed(by: disposeBag)
         
         
     }
@@ -64,5 +80,8 @@ class PopularMovieListViewController: UIViewController, BindableType {
         }
     }
     
-    
+    func openDetail(withPopulerMovie movie: PopulerMovie)  {
+        
+        
+    }
 }

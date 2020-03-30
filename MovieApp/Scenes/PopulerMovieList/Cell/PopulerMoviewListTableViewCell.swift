@@ -19,8 +19,7 @@ class PopulerMoviewListTableViewCell: UITableViewCell, BindableType, NibIdentifi
     
     // MARK: ViewModel
     var viewModel: PopulerMovieListTableViewCellViewModelType!
-    
-    
+     
     //MARK: Private
     private var disposeBag = DisposeBag()
      
