@@ -37,14 +37,7 @@ class PopularMovieListViewController: UIViewController, BindableType {
     func bindViewModel() {
         
         let output = viewModel.outputs
-        //
-        //        viewModel.outputs.tableviewCellsModelType
-        //            .map { [TablesSectionModel(model: "", items: $0)] }
-        //            .bind(to: tableView.rx.items(dataSource: dataSource))
-        //            .disposed(by: disposeBag)
-        
-        
-        
+      
         output.tableviewCellsModelType
             .asObservable()
             .map {[TablesSectionModel(model: "", items: $0)]}

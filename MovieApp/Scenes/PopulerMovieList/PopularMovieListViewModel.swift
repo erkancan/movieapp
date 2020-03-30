@@ -13,9 +13,7 @@ protocol PopularMovieListViewModelInput {}
 
 protocol PopulerMovieListViewModelOutput {
     
-    //var homeViewCellModelTypes: Observable<[HomeViewCellModelType]> { get }
-    
-    var tableviewCellsModelType: Observable<[PopulerMovieListTableViewCellViewModelType]> { get }
+    var tableviewCellsModelType : PublishSubject<[PopulerMovieListTableViewCellViewModelType]> { get set }
 
     
 }
@@ -30,6 +28,7 @@ protocol PopulerMovieListViewModelType {
 final class PopularMovieListViewModel: PopulerMovieListViewModelType, PopularMovieListViewModelInput, PopulerMovieListViewModelOutput {
     
     
+    
     // MARK: Inputs & Outputs
     var inputs: PopularMovieListViewModelInput { return self }
     var outputs: PopulerMovieListViewModelOutput { return self }
@@ -38,8 +37,7 @@ final class PopularMovieListViewModel: PopulerMovieListViewModelType, PopularMov
     
     
     // MARK: Output
-    
-    var tableviewCellsModelType: Observable<[PopulerMovieListTableViewCellViewModelType]>
+    var tableviewCellsModelType: PublishSubject<[PopulerMovieListTableViewCellViewModelType]>
 
     
     // MARK: Private
@@ -50,7 +48,9 @@ final class PopularMovieListViewModel: PopulerMovieListViewModelType, PopularMov
         
         self.service = service
         
-        self.tableviewCellsModelType = Observable.just([PopulerMovieListTableViewCellViewModel]())
+        self.tableviewCellsModelType = PublishSubject()
+        
+        callNetworkRequest()
     }
     
 }
@@ -69,8 +69,8 @@ extension PopularMovieListViewModel {
             case .success(let response):
                  
                 self.popularMovieCollections = Observable.just(response.results)
-                self.tableviewCellsModelType = self.popularMovieCollections.mapMany { PopulerMovieListTableViewCellViewModel(populerMovie: $0) }
-                
+                let element =  response.results.compactMap { PopulerMovieListTableViewCellViewModel(populerMovie: $0) }
+                self.tableviewCellsModelType.onNext(element)
             case .failure(let error):
                 print(error.localizedDescription)
             }

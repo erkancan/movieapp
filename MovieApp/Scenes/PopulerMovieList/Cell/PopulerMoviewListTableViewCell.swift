@@ -23,9 +23,7 @@ class PopulerMoviewListTableViewCell: UITableViewCell, BindableType, NibIdentifi
     
     //MARK: Private
     private var disposeBag = DisposeBag()
-    
-    
-    
+     
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -41,18 +39,17 @@ class PopulerMoviewListTableViewCell: UITableViewCell, BindableType, NibIdentifi
         
         // Configure the view for the selected state
     }
-    
-    
+     
     func bindViewModel() {
         let output = viewModel.output
         
         output.populerMovie
-            .map({$0.name ?? ""})
+            .map({$0.title ?? ""})
             .bind(to: nameLabel.rx.text)
             .disposed(by: disposeBag)
         
         output.populerMovie
-        .map({$0.originalLanguage ?? ""})
+        .map({"\($0.voteAverage ?? 0)"})
         .bind(to: originalLanguageLabel.rx.text)
         .disposed(by: disposeBag)
         

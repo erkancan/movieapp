@@ -12,7 +12,7 @@ import Foundation
 struct PopulerMovie: Codable {
     let originalName: String?
     let genreIDS: [Int]?
-    let name: String?
+    let title: String?
     let popularity: Double?
     let originCountry: [String]?
     let voteCount: Int?
@@ -24,7 +24,7 @@ struct PopulerMovie: Codable {
     enum CodingKeys: String, CodingKey {
         case originalName = "original_name"
         case genreIDS = "genre_ids"
-        case name, popularity
+        case title, popularity
         case originCountry = "origin_country"
         case voteCount = "vote_count"
         case firstAirDate = "first_air_date"
