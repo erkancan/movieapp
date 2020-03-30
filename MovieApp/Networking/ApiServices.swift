@@ -26,7 +26,7 @@ extension ApiServices: TargetType {
         
         switch self {
         case .getPopulerMovieList:
-            return  "/movie/popular?api_key=d55ce90864fb84560a00d2b068350bf6&language=en-US&page=1"//NetworkPath.getPopulerMovieListPath
+            return  NetworkPath.getPopulerMovieListPath + "?api_key=d55ce90864fb84560a00d2b068350bf6&language=en-US&page=1"
         case .getMovieDetail:
             return "/movie/popular?api_key=d55ce90864fb84560a00d2b068350bf6&language=en-US&page=1" //NetworkPath.getMovieDetailPath
         }

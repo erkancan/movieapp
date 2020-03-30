@@ -11,7 +11,7 @@ import Moya
 import RxSwift
 
 
-final class ApiRequest<T>: ApiRouter {
+final class ApiRequest: ApiRouter {
     
     func callApi<T: Codable>(_ responseType: T.Type, target: ApiServices, completion: @escaping CompletionHandler<T>) where T: Decodable {
        
