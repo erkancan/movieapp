@@ -1,5 +1,5 @@
 //
-//  PopulerMovieListViewModel.swift
+//  PopularMovieListViewModel.swift
 //  MovieApp
 //
 //  Created by Erkan CAN on 30.03.2020.
@@ -11,27 +11,25 @@ import RxSwift
 
 protocol PopularMovieListViewModelInput {}
 
-protocol PopulerMovieListViewModelOutput {
+protocol PopularMovieListViewModelOutput {
     
     var tableviewCellsModelType : PublishSubject<[PopulerMovieListTableViewCellViewModelType]> { get set }
-
-    
+ 
 }
 
-protocol PopulerMovieListViewModelType {
+protocol PopularMovieListViewModelType {
     var inputs: PopularMovieListViewModelInput { get }
-    var outputs: PopulerMovieListViewModelOutput { get }
+    var outputs: PopularMovieListViewModelOutput { get }
 }
 
 
 
-final class PopularMovieListViewModel: PopulerMovieListViewModelType, PopularMovieListViewModelInput, PopulerMovieListViewModelOutput {
+final class PopularMovieListViewModel: PopularMovieListViewModelType, PopularMovieListViewModelInput, PopularMovieListViewModelOutput {
     
-    
-    
+     
     // MARK: Inputs & Outputs
     var inputs: PopularMovieListViewModelInput { return self }
-    var outputs: PopulerMovieListViewModelOutput { return self }
+    var outputs: PopularMovieListViewModelOutput { return self }
     
     // MARK: Input
     
@@ -69,7 +67,7 @@ extension PopularMovieListViewModel {
             case .success(let response):
                  
                 self.popularMovieCollections = Observable.just(response.results)
-                let element =  response.results.compactMap { PopulerMovieListTableViewCellViewModel(populerMovie: $0) }
+                let element = response.results.compactMap { PopulerMovieListTableViewCellViewModel(populerMovie: $0) }
                 self.tableviewCellsModelType.onNext(element)
             case .failure(let error):
                 print(error.localizedDescription)

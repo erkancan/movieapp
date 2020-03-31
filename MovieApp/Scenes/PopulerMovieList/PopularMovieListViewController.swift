@@ -81,7 +81,9 @@ class PopularMovieListViewController: UIViewController, BindableType {
     }
     
     func openDetail(withPopulerMovie movie: PopulerMovie)  {
-        
+        var controller = PopularMovieDetailViewController.initFromNib()
+        controller.bind(to: PopularMovieDetailViewModel(movie: movie))
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
 }

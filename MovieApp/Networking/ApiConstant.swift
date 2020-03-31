@@ -16,7 +16,7 @@ struct NetworkPath {
     static let getPopulerMovieListPath = "/movie/popular" // https://api.themoviedb.org/3/movie/popular?api_key=d55ce90864fb84560a00d2b068350bf6&language=en-US&page=1
     static let getMovieDetailPath = "/company/all" // https://api.themoviedb.org/3/movie/570670?api_key=d55ce90864fb84560a00d2b068350bf6&language=en-US
 
-
+    static let imageEndPoint = "http://image.tmdb.org/t/p/w185"
 }
 
 
